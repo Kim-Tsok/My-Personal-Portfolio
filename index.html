@@ -2,34 +2,75 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="Portfolio" content="Kim Tsok" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
 		<title>Kim's Portfolio</title>
 
 		<body class="bg-white text-black">
-			<nav class="fixed w-full pt-2">
+			<nav class="w-full pt-2 pb-5">
 				<div
-					class="flex items-center justify-between m-auto w-[95%] border-2 border-blue-500 rounded-xl p-2 bg-zinc-200/20 backdrop-blur-lg"
+					class="flex items-center justify-between w-[95%] m-auto border-2 border-blue-500 rounded-xl p-2 bg-zinc-200/20 backdrop-blur-lg"
 				>
 					<a href="">
 						<h1 class="text-2xl font-extrabold">
 							Kim<span class="text-blue-500">Tsok.</span>
 						</h1>
 					</a>
-					<ul class="flex">
-						<li class="mx-2"><a href="#home">Home</a></li>
-						<li class="mx-2"><a href="#skilll">Skills</a></li>
-						<li class="mx-2"><a href="#">Home</a></li>
-						<li class="mx-2"><a href="#">Home</a></li>
-					</ul>
+
+					<div class="flex">
+						<a
+							href="#"
+							class="p-2 px-[10px] bg-blue-500 rounded-xl hover:shadow-blue-500 hover:shadow-md flex items-center justify-center"
+							id="menubtn"
+							><img src="/bars-staggered.svg" alt="Menu bar" class="w-4 h-4"
+						/></a>
+
+						<script>
+							document.getElementById("menubtn").onclick = () => {
+								document.getElementById("menubar").style.display = "block";
+							};
+						</script>
+						<a
+							href="#"
+							class="flex items-center justify-center p-2 ml-2 border-[1px] border-blue-500 rounded-xl"
+							id="GIT"
+						>
+							<span class="text-sm" id="GITtext">Get In Touch</span>
+							<img
+								src="/arrow-right.svg"
+								alt="Get In Touch Arrow"
+								class="w-3 h-3 -rotate-[30deg] ml-1"
+								id="GITarrow"
+						/></a>
+
+						<script>
+							document.getElementById("GIT").onmouseenter = () => {
+								document.getElementById("GITarrow").style.rotate = "30deg";
+								document.getElementById("GITtext").style.marginRight = "6px";
+							};
+							document.getElementById("GIT").onmouseleave = () => {
+								document.getElementById("GITarrow").style.rotate = "-1deg";
+								document.getElementById("GITtext").style.marginRight = "0";
+							};
+						</script>
+					</div>
 				</div>
+				<ul class="flex items-center justify-center text-center" id="menubar">
+					<li class="mx-2"><a href="#home">Home</a></li>
+					<li class="mx-2"><a href="#skilll">Skills</a></li>
+					<li class="mx-2"><a href="#">Home</a></li>
+					<li class="mx-2"><a href="#">Home</a></li>
+				</ul>
 			</nav>
-			<section class="h-[60vh] px-8 shadow-xl m-4 rounded-lg" id="home">
-				<div class="flex items-center w-full h-full flex-col justify-center">
+
+			<section class="h-[50vh] px-8 rounded-lg bg-white" id="home">
+				<div
+					class="flex items-center w-full h-full flex-col justify-center shadow-xl"
+				>
 					<article class="w-[40%] text-center">
-						<strong>My Name is Kim Tsok</strong> sit amet, consectetur
-						adipisicing elit. Quas, nostrum? Explicabo delectus facilis
-						assumenda tenetur in, laudantium distinctio.
+						<strong><h1>My Name is Kim Kelvin Tsok</h1> </strong>
+						sit amet, consectetur adipisicing elit. Quas, nostrum? Explicabo
+						delectus facilis assumenda tenetur in, laudantium distinctio.
 					</article>
 
 					<div class="flex mt-2">
@@ -64,10 +105,7 @@
 					</div>
 				</div>
 			</section>
-			<section
-				class="h-[50vh] px shadow-2xl m-2 rounded-lg"
-				id="skill"
-			></section>
+			<section class="h-[100vh]"></section>
 		</body>
 	</head>
 </html>
